@@ -1,0 +1,37 @@
+{
+  "manifest_version": "0.3",
+  "name": "mcp-career-change-signal-engine",
+  "version": "1.0.0",
+  "description": "MCP server for Career Change Signal Engine. Career Change Signal Engine reads the people on your watch list and returns only what changed since you last checked: who left, who landed where, who replaced them, and who started after a role closed. Every row says how the person was matched, which source answered, and how old that source is. Runs on Apify. Clay-ready output.",
+  "author": {
+    "name": "Mamba Labs"
+  },
+  "license": "MIT",
+  "homepage": "https://github.com/mambalabsdev/mcp-career-change-signal-engine",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/mambalabsdev/mcp-career-change-signal-engine"
+  },
+  "server": {
+    "type": "node",
+    "entry_point": "build/index.js",
+    "mcp_config": {
+      "command": "node",
+      "args": [
+        "${__dirname}/build/index.js"
+      ],
+      "env": {
+        "APIFY_TOKEN": "${user_config.apify_token}"
+      }
+    }
+  },
+  "user_config": {
+    "apify_token": {
+      "type": "string",
+      "title": "Apify API Token",
+      "description": "Apify API token for running the actor",
+      "sensitive": true,
+      "required": false
+    }
+  }
+}

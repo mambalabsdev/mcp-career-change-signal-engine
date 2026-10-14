@@ -1,0 +1,50 @@
+{
+  "name": "@mambalabsdev/mcp-career-change-signal-engine",
+  "version": "1.0.0",
+  "description": "MCP server for Career Change Signal Engine. Career Change Signal Engine reads the people on your watch list and returns only what changed since you last checked: who left, who landed where, who replaced them, and who started after a role closed. Every row says how the person was matched, which source answered, and how old that source is. Runs on Apify. Clay-ready output.",
+  "type": "module",
+  "bin": {
+    "mcp-career-change-signal-engine": "./build/index.js"
+  },
+  "files": [
+    "build",
+    "README.md",
+    "LICENSE",
+    "SECURITY.md"
+  ],
+  "scripts": {
+    "build": "tsc && chmod +x build/index.js",
+    "test": "npm run build && node --test test/*.test.js",
+    "prepublishOnly": "npm run build"
+  },
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "job-change",
+    "career-change",
+    "champion-tracking",
+    "leaver-detection",
+    "apify",
+    "clay",
+    "lead-generation"
+  ],
+  "author": "Mamba Labs <labs@mambamindsetgrowth.com>",
+  "license": "MIT",
+  "homepage": "https://apify.com/mambalabs/career-change-signal-engine",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/mambalabsdev/mcp-career-change-signal-engine"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.32.0",
+    "zod": "^4.4.3"
+  },
+  "devDependencies": {
+    "@types/node": "^26.2.0",
+    "typescript": "5.9.3"
+  },
+  "mcpName": "com.mambabuilt/mcp-career-change-signal-engine"
+}
