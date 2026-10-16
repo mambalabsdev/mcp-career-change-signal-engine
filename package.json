@@ -1,6 +1,6 @@
 {
   "name": "@mambalabsdev/mcp-career-change-signal-engine",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "MCP server for Career Change Signal Engine. Career Change Signal Engine reads the people on your watch list and returns only what changed since you last checked: who left, who landed where, who replaced them, and who started after a role closed. Every row says how the person was matched, which source answered, and how old that source is. Runs on Apify. Clay-ready output.",
   "type": "module",
   "bin": {
